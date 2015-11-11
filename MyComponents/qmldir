@@ -1,0 +1,25 @@
+module MyComponents
+BusyIndicator 1.0 BusyIndicator/BusyIndicator.qml
+ToggleButton 1.0 ToggleButton/ToggleButton.qml
+Header 1.0 Header/Header.qml
+AirbusHeader 1.0 Header/AirbusHeader.qml
+FlippableDialog 1.0 Dialog/FlippableDialog.qml
+InformationSection 1.0 InformationSection/InformationSection.qml
+Page 1.0 Page/Page.qml
+ParameterList 1.0 ParameterList/ParameterList.qml
+ParameterDelegate 1.0 ParameterList/ParameterDelegate.qml
+CheckedListDelegate 1.0 ParameterList/Delegates/CheckedListDelegate.qml
+PopupBox 1.0 PopupBox/PopupBox.qml
+SideMenu 1.0 SideMenu/SideMenu.qml
+Splitter 1.0 Splitter/Splitter.qml
+StatusBar 1.0 StatusBar/StatusBar.qml
+Tab 1.0 Tab/Tab.qml
+TextFieldWithLabel 1.0 TextFieldWithLabel/TextFieldWithLabel.qml
+PanelTab 1.0 Tab/PanelTab.qml
+TickBox 1.0 TickBox/TickBox.qml
+AirbusThemeDefault 1.0 Themes/AirbusThemeDefault.qml
+ScrollIndicator 1.0 View/ScrollIndicator.qml
+CoverFlow 1.0 View/CoverFlow/CoverFlow.qml
+MyTableView 1.0 View/MyTableView.qml
+plugin qmlmodulesplugins
+
