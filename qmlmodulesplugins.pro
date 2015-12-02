@@ -51,7 +51,20 @@ OTHER_FILES =   MyComponents/qmldir \
                 MyComponents/View/CoverFlow/CoverFlowDelegate.qml \
                 MyComponents/View/CoverFlow/BackViewList.qml \
                 MyComponents/View/CoverFlow/BackViewListDelegate.qml \
-                MyComponents/View/MyTableView.qml
+                MyComponents/View/MyTableView.qml \
+    MyComponents/Image/AIRBUS.png \
+    MyComponents/Image/close.png \
+    MyComponents/Image/filter.png \
+    MyComponents/Image/open.png \
+    MyComponents/Image/save.png \
+    MyComponents/TickBox/Image/tick.png \
+    MyComponents/View/CoverFlow/Image/floor.jpg \
+    MyComponents/View/CoverFlow/Image/arrow.png \
+    jbQuick/Charts/QChart.js \
+    jbQuick/Charts/QChartGallery.js \
+    jbQuick/Charts/QChart.qml \
+    jbQuick/Charts/QChartGallery.qml \
+    jbQuick/Charts/qmldir
 
 !equals(_PRO_FILE_PWD_, $$OUT_PWD) {
     copy_qmldir.target = $$OUT_PWD/qmldir
