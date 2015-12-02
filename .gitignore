@@ -1,0 +1,16 @@
+
+*.o
+
+Makefile
+
+Makefile.Debug
+
+Makefile.Release
+
+moc_myqmlmodules.cpp
+
+moc_progresscircle.cpp
+
+moc_qmlmodulesplugins_plugin.cpp
+
+*.dylib
