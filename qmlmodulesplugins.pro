@@ -74,5 +74,6 @@ DISTFILES += \
     jbQuick/Charts/QChartGallery.js \
     jbQuick/Charts/qmldir \
     jbQuick/Charts/QChart.qml \
-    jbQuick/Charts/QChartGallery.qml
+    jbQuick/Charts/QChartGallery.qml \
+    qmldir
 

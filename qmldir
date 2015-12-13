@@ -1,0 +1,3 @@
+module MyComponents
+plugin qmlmodulesplugins
+
