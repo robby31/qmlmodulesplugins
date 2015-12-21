@@ -3,6 +3,7 @@ BusyIndicator 1.0 BusyIndicator/BusyIndicator.qml
 ToggleButton 1.0 ToggleButton/ToggleButton.qml
 Header 1.0 Header/Header.qml
 AirbusHeader 1.0 Header/AirbusHeader.qml
+FilteringDialog 1.0 Dialog/FilteringDialog.qml
 FlippableDialog 1.0 Dialog/FlippableDialog.qml
 InformationSection 1.0 InformationSection/InformationSection.qml
 Page 1.0 Page/Page.qml

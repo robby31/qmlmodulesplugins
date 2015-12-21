@@ -17,7 +17,7 @@ TableView {
         var dataModel = tableview.model
         if (dataModel != null)
         {
-            for (var i = 0; i < dataModel.columnCount(); ++i) {
+            for (var i = 0; i < dataModel.columnCount; ++i) {
                 var str = 'import QtQuick 2.0; import QtQuick.Controls 1.1; TableViewColumn{ role: "'+ dataModel.role(i) +'"; title: "'+ dataModel.title(i) +'"; width: 100 }';
                 var column = Qt.createQmlObject(str,tableview);
                 if (column.Accessible.role === Accessible.ColumnHeader)
