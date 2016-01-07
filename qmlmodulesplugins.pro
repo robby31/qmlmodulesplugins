@@ -66,7 +66,8 @@ OTHER_FILES =   MyComponents/qmldir \
     jbQuick/Charts/QChartGallery.qml \
     jbQuick/Charts/qmldir \
     MyComponents/Dialog/FilteringColumnDelegate.qml \
-    MyComponents/Dialog/FilteringDialog.qml
+    MyComponents/Dialog/FilteringDialog.qml \
+    MyComponents/MyApplication.qml
 
 !equals(_PRO_FILE_PWD_, $$OUT_PWD) {
     copy_qmldir.target = $$OUT_PWD/qmldir
@@ -91,4 +92,5 @@ DISTFILES += \
     jbQuick/Charts/QChart.qml \
     jbQuick/Charts/QChartGallery.qml \
     qmldir
+
 
