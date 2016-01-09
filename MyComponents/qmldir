@@ -23,5 +23,11 @@ ScrollIndicator 1.0 View/ScrollIndicator.qml
 CoverFlow 1.0 View/CoverFlow/CoverFlow.qml
 MyTableView 1.0 View/MyTableView.qml
 MyApplication 1.0 MyApplication.qml
+EditableDelegate 1.0 View/EditableDelegates/EditableDelegate.qml
+EditableCalendarDelegate 1.0 View/EditableDelegates/EditableCalendarDelegate.qml
+EditableTextFieldDelegate 1.0 View/EditableDelegates/EditableTextFieldDelegate.qml
+EditableDoubleDelegate 1.0 View/EditableDelegates/EditableDoubleDelegate.qml
+EditableComboBoxDelegate 1.0 View/EditableDelegates/EditableComboBoxDelegate.qml
+
 plugin qmlmodulesplugins
 

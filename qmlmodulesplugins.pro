@@ -91,6 +91,11 @@ DISTFILES += \
     jbQuick/Charts/qmldir \
     jbQuick/Charts/QChart.qml \
     jbQuick/Charts/QChartGallery.qml \
-    qmldir
+    qmldir \
+    MyComponents/View/EditableDelegates/EditableCalendarDelegate.qml \
+    MyComponents/View/EditableDelegates/EditableDelegate.qml \
+    MyComponents/View/EditableDelegates/EditableTextFieldDelegate.qml \
+    MyComponents/View/EditableDelegates/EditableDoubleDelegate.qml \
+    MyComponents/View/EditableDelegates/EditableComboBoxDelegate.qml
 
 
