@@ -21,20 +21,24 @@ ApplicationWindow {
     property alias state: mainArea.state
     property alias states: mainArea.states
 
+    property alias logoCompany: header.logoCompany
+
     property var theme: AirbusThemeDefault { }
 
     property Component pages
+
+    signal itemLoaded(var item)
 
     Rectangle {
         id: mainArea
         anchors.fill: parent
 
-        state: modelButtons.get(0).state
+        state: modelButtons ? modelButtons.get(0).state : "DEFAULT"
 
         Header {
             id: header
             anchors {left: parent.left; right: parent.right; top: parent.top}
-            height: headerHeight
+            height: headerHeight 
 
             ExclusiveGroup {
                 id: tabGroup
@@ -50,7 +54,7 @@ ApplicationWindow {
                     Tab {
                         id: accountsTab
                         width: height
-                        height: parent.height
+                        height: header.height
                         icon: model.icon ? model.icon : ""
                         title: model.title
                         exclusiveGroup: tabGroup
@@ -75,6 +79,7 @@ ApplicationWindow {
             id: pagesLoader
             anchors.fill: parent
             sourceComponent: pages
+            onLoaded: itemLoaded(pagesLoader.item)
         }
 
         PopupBox {
