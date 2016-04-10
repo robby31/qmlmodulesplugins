@@ -14,3 +14,5 @@ moc_progresscircle.cpp
 moc_qmlmodulesplugins_plugin.cpp
 
 *.dylib
+
+qmlmodulesplugins.pro.user
