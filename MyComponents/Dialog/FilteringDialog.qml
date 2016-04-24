@@ -165,8 +165,8 @@ Rectangle {
             width: 10
             height: parent.height
             anchors {top: parent.top; right: parent.right}
-            handleSize: listData.visibleArea.heightRatio * listData.height
-            handlePosition: listData.visibleArea.yPosition * listData.height
+            handleSize: height>0 ? listData.visibleArea.heightRatio * height : 0
+            handlePosition: height>0 ? listData.visibleArea.yPosition * height : 0
             opacity: listData.moving? 1.0 : 0.0
         }
     }

@@ -29,5 +29,8 @@ EditableTextFieldDelegate 1.0 View/EditableDelegates/EditableTextFieldDelegate.q
 EditableDoubleDelegate 1.0 View/EditableDelegates/EditableDoubleDelegate.qml
 EditableComboBoxDelegate 1.0 View/EditableDelegates/EditableComboBoxDelegate.qml
 
+Chart  1.0 Charts/QChart.qml
+Charts 1.0 Charts/QChart.js
+
 plugin qmlmodulesplugins
 

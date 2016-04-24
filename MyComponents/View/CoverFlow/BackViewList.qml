@@ -81,8 +81,8 @@ Rectangle {
             width: 10
             height: parent.height
             anchors {top: parent.top; right: parent.right}
-            handleSize: list.visibleArea.heightRatio * list.height
-            handlePosition: list.visibleArea.yPosition * list.height
+            handleSize: height>0 ? list.visibleArea.heightRatio * height : 0
+            handlePosition: height>0 ? list.visibleArea.yPosition * height : 0
             opacity: list.moving? 1.0 : 0.0
         }
     }
