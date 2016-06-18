@@ -30,16 +30,16 @@ Item {
         height: width
         fillMode: Image.PreserveAspectFit
         source: icon
-        anchors {left: parent.left; verticalCenter: parent.verticalCenter; leftMargin: 20}
+        anchors {left: parent.left; verticalCenter: parent.verticalCenter; leftMargin: 20}      
+    }
 
-        Colorize {
-            anchors.fill: parent
-            source: parent
-            hue: 0.0
-            saturation: 0.5
-            lightness: 1.0
-            visible: mouseArea.pressed
-        }        
+    Colorize {
+        anchors.fill: actionIcon
+        source: actionIcon
+        hue: 0.0
+        saturation: 0.5
+        lightness: 1.0
+        visible: mouseArea.pressed
     }
 
     Text {
@@ -58,6 +58,9 @@ Item {
         id: mouseArea
         anchors.fill: parent
         hoverEnabled: true
-        onClicked: { menu.actionClicked(name); sideMenu.hide()}
+        onClicked: {
+            menu.hide()
+            menu.actionClicked(name)
+        }
     }
 }

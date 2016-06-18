@@ -52,7 +52,8 @@ popupbox.path = $$installPath/PopupBox
 togglebutton.files = MyComponents/ToggleButton/ToggleButton.qml
 togglebutton.path = $$installPath/ToggleButton
 
-page.files = MyComponents/Page/Page.qml
+page.files = MyComponents/Page/Page.qml \
+             MyComponents/Page/DatabasePage.qml
 page.path = $$installPath/Page
 
 parameterlist.files = MyComponents/ParameterList/ParameterList.qml \
@@ -97,6 +98,8 @@ tickboximage.files = MyComponents/TickBox/Image/tick.png
 tickboximage.path = $$installPath/TickBox/Image
 
 view.files = MyComponents/View/ScrollIndicator.qml \
+             MyComponents/View/TableHeaderDelegate.qml \
+             MyComponents/View/TableItemDelegate.qml \
              MyComponents/View/MyTableView.qml
 view.path = $$installPath/View
 
@@ -131,7 +134,10 @@ charts.path = $$installPath/Charts
 images.files =    MyComponents/Image/AIRBUS.png \
                   MyComponents/Image/close.png \
                   MyComponents/Image/filter.png \
+                  MyComponents/Image/arrow.png \
+                  MyComponents/Image/table.png \
                   MyComponents/Image/open.png \
+                  MyComponents/Image/exit.png \
                   MyComponents/Image/menu.png \
                   MyComponents/Image/save.png
 images.path = $$installPath/Image
@@ -140,3 +146,11 @@ INSTALLS += target qmldir application busyindicator dialog header popupbox toggl
 INSTALLS += parameterlist parameterlistdelegates tab images sidemenu themes splitter tickbox tickboximage
 INSTALLS += view coverflow coverflowimages editabledelegates statusbar informationsection textfield
 INSTALLS += charts
+
+DISTFILES += \
+    MyComponents/Page/DatabasePage.qml \
+    MyComponents/Image/arrow.png \
+    MyComponents/Image/table.png \
+    MyComponents/Image/exit.png \
+    MyComponents/View/TableHeaderDelegate.qml \
+    MyComponents/View/TableItemDelegate.qml

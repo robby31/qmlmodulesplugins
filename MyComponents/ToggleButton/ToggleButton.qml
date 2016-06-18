@@ -37,16 +37,17 @@ Item {
         height: parent.height*5/10
         anchors {top: parent.top; horizontalCenter: parent.horizontalCenter; topMargin: parent.height*1/10}
         fillMode: Image.PreserveAspectFit
-
-        Colorize {
-            anchors.fill: parent
-            source: parent
-            hue: 0.0
-            saturation: 0.5
-            lightness: 1.0
-            visible: mouseArea.pressed
-        }
     }
+
+    Colorize {
+        anchors.fill: buttonIcon
+        source: buttonIcon
+        hue: 0.0
+        saturation: 0.5
+        lightness: 1.0
+        visible: mouseArea.pressed
+    }
+
     Text {
         id: buttonText
         width: parent.width*3/4

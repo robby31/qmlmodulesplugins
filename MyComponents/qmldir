@@ -7,6 +7,7 @@ FilteringDialog 1.0 Dialog/FilteringDialog.qml
 FlippableDialog 1.0 Dialog/FlippableDialog.qml
 InformationSection 1.0 InformationSection/InformationSection.qml
 Page 1.0 Page/Page.qml
+DatabasePage 1.0 Page/DatabasePage.qml
 ParameterList 1.0 ParameterList/ParameterList.qml
 ParameterDelegate 1.0 ParameterList/ParameterDelegate.qml
 CheckedListDelegate 1.0 ParameterList/Delegates/CheckedListDelegate.qml
@@ -22,6 +23,8 @@ AirbusThemeDefault 1.0 Themes/AirbusThemeDefault.qml
 ScrollIndicator 1.0 View/ScrollIndicator.qml
 CoverFlow 1.0 View/CoverFlow/CoverFlow.qml
 MyTableView 1.0 View/MyTableView.qml
+TableHeaderDelegate 1.0 View/TableHeaderDelegate.qml
+TableItemDelegate 1.0 View/TableItemDelegate.qml
 MyApplication 1.0 MyApplication.qml
 EditableDelegate 1.0 View/EditableDelegates/EditableDelegate.qml
 EditableCalendarDelegate 1.0 View/EditableDelegates/EditableCalendarDelegate.qml

@@ -53,15 +53,15 @@ Rectangle {
         anchors {verticalCenter: parent.verticalCenter; left: parent.left; topMargin: parent.height*1/10; leftMargin: parent.height*2/10}
         fillMode: Image.PreserveAspectFit
         source: button.icon
+    }
 
-        Colorize {
-            anchors.fill: parent
-            source: parent
-            hue: 0.0
-            saturation: 0.0
-            lightness: 1.0
-            visible: button.pressed || button.checked
-        }
+    Colorize {
+        anchors.fill: buttonIcon
+        source: buttonIcon
+        hue: 0.0
+        saturation: 0.0
+        lightness: 1.0
+        visible: button.pressed || button.checked
     }
 
     Text {

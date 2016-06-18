@@ -16,24 +16,6 @@ Rectangle {
     height: 300
     border.color: theme.darkColor
 
-    onEnabledChanged: {
-        if (enabled)
-        {
-            if (!columnDataModel && columns.currentIndex!==-1)
-            {
-                filteringTextField.text = ""
-                columnSelected(columns.model.get(columns.currentIndex, "name"))
-            }
-            else if (columnDataModel)
-            {
-                if (filteringTextField.text != "")
-                    columnDataModel.setFilter("%1 LIKE '%%%2%%'".arg(columnDataModel.parameter).arg(filteringTextField.text))
-                else
-                    columnDataModel.setFilter("")
-            }
-        }
-    }
-
     Rectangle {
         id: titleArea
         width: parent.width
@@ -68,10 +50,7 @@ Rectangle {
         highlight: Rectangle { color: "lightsteelblue"; radius: 5 }
         clip: true
 
-        onCurrentIndexChanged: {
-            filteringTextField.text = ""
-            columnSelected(model.get(currentIndex, "name"))
-        }
+        onCurrentIndexChanged: columnSelected(model.get(currentIndex, "name"))
     }
 
     RowLayout {
@@ -89,14 +68,11 @@ Rectangle {
             id: filteringTextField
             anchors { left: parent.left; right: selectAllButton.left }
             placeholderText: "Filtering"
-            onTextChanged: {
+            text: columnDataModel ? columnDataModel.textFilter : ""
+
+            onAccepted: {
                 if (columnDataModel)
-                {
-                    if (text != "")
-                        columnDataModel.setFilter("%1 LIKE '%%%2%%'".arg(columnDataModel.parameter).arg(text))
-                    else
-                        columnDataModel.setFilter("")
-                }
+                    columnDataModel.textFilter = text
             }
         }
 
@@ -146,8 +122,6 @@ Rectangle {
                 }
             }
         }
-
-
     }
 
     ListView {
@@ -182,7 +156,7 @@ Rectangle {
             id: okButton
             text: "Ok"
             anchors {verticalCenter: parent.verticalCenter; right: parent.right; rightMargin: 10}
-            onClicked: {ok()}
+            onClicked: ok()
         }
     }
 }

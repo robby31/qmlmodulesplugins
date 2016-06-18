@@ -45,15 +45,15 @@ Item {
         height: parent.height/2
         width: height
         anchors {verticalCenter: parent.verticalCenter; right: parent.right; rightMargin: 10}
+    }
 
-        Colorize {
-            anchors.fill: parent
-            source: parent
-            hue: 0.0
-            saturation: 0.5
-            lightness: 1.0
-            visible: mouseArea.pressed
-        }
+    Colorize {
+        anchors.fill: arrow
+        source: arrow
+        hue: 0.0
+        saturation: 0.5
+        lightness: 1.0
+        visible: mouseArea.pressed
     }
 
     Rectangle {
