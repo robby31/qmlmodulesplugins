@@ -6,6 +6,7 @@ AirbusHeader 1.0 Header/AirbusHeader.qml
 FilteringDialog 1.0 Dialog/FilteringDialog.qml
 FlippableDialog 1.0 Dialog/FlippableDialog.qml
 InformationSection 1.0 InformationSection/InformationSection.qml
+MyButton 1.0 MyButton/MyButton.qml
 Page 1.0 Page/Page.qml
 DatabasePage 1.0 Page/DatabasePage.qml
 ParameterList 1.0 ParameterList/ParameterList.qml
