@@ -25,7 +25,8 @@ ApplicationWindow {
 
     property var theme: AirbusThemeDefault { }
 
-    property Component pages
+    property alias pages: pagesLoader.sourceComponent
+    property alias srcPages: pagesLoader.source
 
     signal itemLoaded(var item)
 
@@ -77,8 +78,7 @@ ApplicationWindow {
 
         Loader {
             id: pagesLoader
-            anchors.fill: parent
-            sourceComponent: pages
+            anchors { left: parent.left; right: parent.right; top: header.bottom; bottom: parent.bottom }
             onLoaded: itemLoaded(pagesLoader.item)
         }
 
