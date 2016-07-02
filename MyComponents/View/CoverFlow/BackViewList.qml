@@ -20,28 +20,12 @@ Rectangle {
             GradientStop {position: 1; color: theme.gradientEndColor}
         }
 
-        Rectangle {
+        MyButton {
             id: backButton
-            width: 60
-            height: 30
-            anchors {left: parent.left; verticalCenter: parent.verticalCenter; leftMargin: 10}
-            color: backButtonMouseArea.pressed? theme.highlightSelectColor : theme.highlightColor
-            radius: 10
-            border.color: theme.separatorColor
-            clip: true
-            opacity: 1
-
-            Text {
-                anchors.centerIn: parent
-                font.pixelSize:14
-                text: "< Back"
-            }
-            MouseArea {
-                id: backButtonMouseArea
-                anchors.fill: parent
-                onClicked: back()
-            }
+            text: "< Back"
+            onButtonClicked: back()
         }
+
         Text {
             id: itemText
             anchors {right: parent.right; top: parent.top; rightMargin: 20; topMargin: 10}
