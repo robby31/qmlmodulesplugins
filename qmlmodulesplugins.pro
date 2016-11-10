@@ -56,6 +56,7 @@ mybutton.files = MyComponents/MyButton/MyButton.qml
 mybutton.path = $$installPath/MyButton
 
 page.files = MyComponents/Page/Page.qml \
+             MyComponents/Page/DatabaseDelegate.qml \
              MyComponents/Page/DatabasePage.qml
 page.path = $$installPath/Page
 
@@ -148,4 +149,5 @@ DISTFILES += \
     MyComponents/Image/exit.png \
     MyComponents/View/TableHeaderDelegate.qml \
     MyComponents/View/TableItemDelegate.qml \
-    MyComponents/MyButton/MyButton.qml
+    MyComponents/MyButton/MyButton.qml \
+    MyComponents/Page/DatabaseDelegate.qml
