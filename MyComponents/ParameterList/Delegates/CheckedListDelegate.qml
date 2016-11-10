@@ -32,5 +32,6 @@ Item {
         font.pixelSize: parent.height/2
         verticalAlignment: Text.AlignVCenter
         elide: Text.Right
+        clip: true
     }
 }
