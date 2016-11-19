@@ -24,6 +24,7 @@ AirbusThemeDefault 1.0 Themes/AirbusThemeDefault.qml
 ScrollIndicator 1.0 View/ScrollIndicator.qml
 CoverFlow 1.0 View/CoverFlow/CoverFlow.qml
 MyTableView 1.0 View/MyTableView.qml
+PivotView 1.0 View/PivotView.qml
 TableHeaderDelegate 1.0 View/TableHeaderDelegate.qml
 TableItemDelegate 1.0 View/TableItemDelegate.qml
 MyApplication 1.0 MyApplication.qml

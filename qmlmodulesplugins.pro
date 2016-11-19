@@ -104,6 +104,7 @@ tickboximage.path = $$installPath/TickBox/Image
 view.files = MyComponents/View/ScrollIndicator.qml \
              MyComponents/View/TableHeaderDelegate.qml \
              MyComponents/View/TableItemDelegate.qml \
+             MyComponents/View/PivotView.qml \
              MyComponents/View/MyTableView.qml
 view.path = $$installPath/View
 
@@ -150,4 +151,5 @@ DISTFILES += \
     MyComponents/View/TableHeaderDelegate.qml \
     MyComponents/View/TableItemDelegate.qml \
     MyComponents/MyButton/MyButton.qml \
-    MyComponents/Page/DatabaseDelegate.qml
+    MyComponents/Page/DatabaseDelegate.qml \
+    MyComponents/View/PivotView.qml
