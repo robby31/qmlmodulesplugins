@@ -30,6 +30,10 @@ ApplicationWindow {
 
     signal itemLoaded(var item)
 
+    function setPage(source, properties) {
+        pagesLoader.setSource(source, properties)
+    }
+
     Rectangle {
         id: mainArea
         anchors.fill: parent
