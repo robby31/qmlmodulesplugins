@@ -2,7 +2,6 @@ import QtQuick 2.0
 
 Rectangle {
     id: button
-    anchors { verticalCenter: parent.verticalCenter }
     width: loader.width*1.2
     height: loader.height*1.2
     color: mousearea.pressed? theme.highlightSelectColor : ((mousearea.containsMouse || !hovered)? theme.highlightColor : "transparent")
