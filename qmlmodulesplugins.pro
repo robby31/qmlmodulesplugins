@@ -1,10 +1,12 @@
 TEMPLATE = lib
 TARGET = qmlmodulesplugins
-QT += qml quick
+QT += qml quick sql
 CONFIG += qt plugin
 
 TARGET = $$qtLibraryTarget($$TARGET)
 uri = MyComponents
+
+include (../QmlApplication/QmlApplication.prf)
 
 # Input
 SOURCES += \
@@ -139,9 +141,12 @@ images.files =    MyComponents/Image/AIRBUS.png \
                   MyComponents/Image/save.png
 images.path = $$installPath/Image
 
+chart.files = MyComponents/Chart/VSqlBarModelMapper.qml
+chart.path = $$installPath/Chart
+
 INSTALLS += target qmldir application busyindicator dialog header popupbox togglebutton mybutton page
 INSTALLS += parameterlist parameterlistdelegates tab images sidemenu themes splitter tickbox tickboximage
-INSTALLS += view coverflow coverflowimages editabledelegates statusbar informationsection textfield
+INSTALLS += view coverflow coverflowimages editabledelegates statusbar informationsection textfield chart
 
 DISTFILES += \
     MyComponents/Page/DatabasePage.qml \
@@ -152,4 +157,5 @@ DISTFILES += \
     MyComponents/View/TableItemDelegate.qml \
     MyComponents/MyButton/MyButton.qml \
     MyComponents/Page/DatabaseDelegate.qml \
-    MyComponents/View/PivotView.qml
+    MyComponents/View/PivotView.qml \
+    MyComponents/Chart/VSqlBarModelMapper.qml
