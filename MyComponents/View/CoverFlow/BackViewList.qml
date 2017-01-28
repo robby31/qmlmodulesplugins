@@ -23,6 +23,8 @@ Rectangle {
         MyButton {
             id: backButton
 
+            anchors.verticalCenter: parent.verticalCenter
+
             sourceComponent: Text {
                 text: "< Back"
                 font.pointSize: 12

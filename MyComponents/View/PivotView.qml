@@ -32,14 +32,14 @@ Item {
             }
 
             MyButton {
-                anchors { left: parent.left; leftMargin: 5 }
+                anchors { left: parent.left; leftMargin: 5; verticalCenter: parent.verticalCenter }
                 sourceComponent: Text { text: "< Back" }
                 onButtonClicked: goBackView()
             }
 
             MyButton {
                 id: total
-                anchors {right: parent.right; rightMargin: 5}
+                anchors {right: parent.right; rightMargin: 5; verticalCenter: parent.verticalCenter }
                 sourceComponent: Text {text: (listView.model !== null && listView.model.isFiltered ? "SubTotal: " : "Total: ")+Number(listView.model.total).toLocaleString(Qt.locale("fr_FR"))+" "+textUnit
                                        color: "blue" }
                 hovered: true
