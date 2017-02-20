@@ -52,6 +52,7 @@ ApplicationWindow {
             Row {
                 height: parent.height
                 anchors {verticalCenter: parent.verticalCenter; left: parent.left; leftMargin: 320}
+                spacing:10
 
                 Repeater {
                     model: modelButtons
