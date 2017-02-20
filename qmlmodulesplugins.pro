@@ -141,7 +141,8 @@ images.files =    MyComponents/Image/AIRBUS.png \
                   MyComponents/Image/save.png
 images.path = $$installPath/Image
 
-chart.files = MyComponents/Chart/VSqlBarModelMapper.qml
+chart.files = MyComponents/Chart/VSqlBarModelMapper.qml \
+              MyComponents/Chart/BridgeChart.qml
 chart.path = $$installPath/Chart
 
 INSTALLS += target qmldir application busyindicator dialog header popupbox togglebutton mybutton page
@@ -158,4 +159,5 @@ DISTFILES += \
     MyComponents/MyButton/MyButton.qml \
     MyComponents/Page/DatabaseDelegate.qml \
     MyComponents/View/PivotView.qml \
-    MyComponents/Chart/VSqlBarModelMapper.qml
+    MyComponents/Chart/VSqlBarModelMapper.qml \
+    MyComponents/Chart/BridgeChart.qml

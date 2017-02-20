@@ -34,6 +34,7 @@ EditableTextFieldDelegate 1.0 View/EditableDelegates/EditableTextFieldDelegate.q
 EditableDoubleDelegate 1.0 View/EditableDelegates/EditableDoubleDelegate.qml
 EditableComboBoxDelegate 1.0 View/EditableDelegates/EditableComboBoxDelegate.qml
 VSqlBarModelMapper 1.0 Chart/VSqlBarModelMapper.qml
+BridgeChart 1.0 Chart/BridgeChart.qml
 
 plugin qmlmodulesplugins
 
