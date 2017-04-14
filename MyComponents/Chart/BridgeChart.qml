@@ -170,7 +170,7 @@ Item {
                             height: contentHeight
                             text: !base && flowRectangle.bridgeValue >= 0 ? "+"+roundDouble(flowRectangle.bridgeValue) : roundDouble(flowRectangle.bridgeValue)
                             anchors.horizontalCenter: parent.horizontalCenter
-                            color: valueTextColor
+                            color: base ? "white" : valueTextColor
                             font.pixelSize: 12
                             horizontalAlignment: Text.AlignHCenter
                             verticalAlignment: Text.AlignVCenter
