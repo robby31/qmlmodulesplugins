@@ -107,7 +107,9 @@ view.files = MyComponents/View/ScrollIndicator.qml \
              MyComponents/View/TableHeaderDelegate.qml \
              MyComponents/View/TableItemDelegate.qml \
              MyComponents/View/PivotView.qml \
-             MyComponents/View/MyTableView.qml
+             MyComponents/View/MyTableView.qml \
+             MyComponents/View/ListViewDelegate.qml
+
 view.path = $$installPath/View
 
 informationsection.files = MyComponents/InformationSection/InformationSection.qml
@@ -160,4 +162,5 @@ DISTFILES += \
     MyComponents/Page/DatabaseDelegate.qml \
     MyComponents/View/PivotView.qml \
     MyComponents/Chart/VSqlBarModelMapper.qml \
-    MyComponents/Chart/BridgeChart.qml
+    MyComponents/Chart/BridgeChart.qml \
+    MyComponents/View/ListViewDelegate.qml

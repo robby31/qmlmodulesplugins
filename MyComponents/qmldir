@@ -27,6 +27,7 @@ MyTableView 1.0 View/MyTableView.qml
 PivotView 1.0 View/PivotView.qml
 TableHeaderDelegate 1.0 View/TableHeaderDelegate.qml
 TableItemDelegate 1.0 View/TableItemDelegate.qml
+ListViewDelegate 1.0 View/ListViewDelegate.qml
 MyApplication 1.0 MyApplication.qml
 EditableDelegate 1.0 View/EditableDelegates/EditableDelegate.qml
 EditableCalendarDelegate 1.0 View/EditableDelegates/EditableCalendarDelegate.qml
