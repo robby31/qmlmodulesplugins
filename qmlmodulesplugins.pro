@@ -128,7 +128,9 @@ coverflowimages.path = $$installPath/View/CoverFlow/Image
 editabledelegates.files =    MyComponents/View/EditableDelegates/EditableCalendarDelegate.qml \
                              MyComponents/View/EditableDelegates/EditableDelegate.qml \
                              MyComponents/View/EditableDelegates/EditableTextFieldDelegate.qml \
+                             MyComponents/View/EditableDelegates/EditableText.qml \
                              MyComponents/View/EditableDelegates/EditableDoubleDelegate.qml \
+                             MyComponents/View/EditableDelegates/EditableComboBox.qml \
                              MyComponents/View/EditableDelegates/EditableComboBoxDelegate.qml
 editabledelegates.path = $$installPath/View/EditableDelegates
 
@@ -163,4 +165,6 @@ DISTFILES += \
     MyComponents/View/PivotView.qml \
     MyComponents/Chart/VSqlBarModelMapper.qml \
     MyComponents/Chart/BridgeChart.qml \
-    MyComponents/View/ListViewDelegate.qml
+    MyComponents/View/ListViewDelegate.qml \
+    MyComponents/View/EditableDelegates/EditableComboBox.qml \
+    MyComponents/View/EditableDelegates/EditableText.qml
