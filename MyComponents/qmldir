@@ -32,10 +32,10 @@ MyApplication 1.0 MyApplication.qml
 EditableDelegate 1.0 View/EditableDelegates/EditableDelegate.qml
 EditableCalendarDelegate 1.0 View/EditableDelegates/EditableCalendarDelegate.qml
 EditableTextFieldDelegate 1.0 View/EditableDelegates/EditableTextFieldDelegate.qml
-EditableTextFieldDelegate 1.0 View/EditableDelegates/EditableText.qml
+EditableText 1.0 View/EditableDelegates/EditableText.qml
 EditableDoubleDelegate 1.0 View/EditableDelegates/EditableDoubleDelegate.qml
 EditableComboBoxDelegate 1.0 View/EditableDelegates/EditableComboBoxDelegate.qml
-EditableComboBoxDelegate 1.0 View/EditableDelegates/EditableComboBox.qml
+EditableComboBox 1.0 View/EditableDelegates/EditableComboBox.qml
 VSqlBarModelMapper 1.0 Chart/VSqlBarModelMapper.qml
 BridgeChart 1.0 Chart/BridgeChart.qml
 
