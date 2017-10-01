@@ -6,7 +6,8 @@ CONFIG += qt plugin
 TARGET = $$qtLibraryTarget($$TARGET)
 uri = MyComponents
 
-include (../QmlApplication/QmlApplication.prf)
+INCLUDEPATH += $$(MYLIBRARY)/$$QT_VERSION/include/QmlApplication
+LIBS += -L$$(MYLIBRARY)/$$QT_VERSION -l$$qtLibraryTarget(QmlApplication)
 
 # Input
 SOURCES += \
