@@ -7,10 +7,11 @@ SwipeDelegate {
     height: 30
 
     onFocusChanged: swipe.close()
+    onClicked: delegate.ListView.view.currentIndex = index
 
     background: Item {
         implicitWidth: delegate.width
-        implicitHeight: 40
+        implicitHeight: delegate.height
 
         Rectangle {
             id: highlitedRectangle
@@ -38,15 +39,6 @@ SwipeDelegate {
             anchors { left: parent.left; bottom: parent.bottom }
             color: theme.separatorColor
         }
-    }
-
-    MouseArea {
-        id: mouseArea
-        z: 1
-        anchors.fill: parent
-        hoverEnabled: true
-        onClicked: delegate.ListView.view.currentIndex = index
-        visible: !delegate.ListView.isCurrentItem
     }
 }
 
