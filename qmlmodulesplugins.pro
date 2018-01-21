@@ -6,7 +6,8 @@ CONFIG += qt plugin
 TARGET = $$qtLibraryTarget($$TARGET)
 uri = MyComponents
 
-include (../QmlApplication/QmlApplication.prf)
+INCLUDEPATH += $$(MYLIBRARY)/$$QT_VERSION/include/QmlApplication
+LIBS += -L$$(MYLIBRARY)/$$QT_VERSION -l$$qtLibraryTarget(QmlApplication)
 
 # Input
 SOURCES += \
@@ -107,7 +108,9 @@ view.files = MyComponents/View/ScrollIndicator.qml \
              MyComponents/View/TableHeaderDelegate.qml \
              MyComponents/View/TableItemDelegate.qml \
              MyComponents/View/PivotView.qml \
-             MyComponents/View/MyTableView.qml
+             MyComponents/View/MyTableView.qml \
+             MyComponents/View/ListViewDelegate.qml
+
 view.path = $$installPath/View
 
 informationsection.files = MyComponents/InformationSection/InformationSection.qml
@@ -126,7 +129,9 @@ coverflowimages.path = $$installPath/View/CoverFlow/Image
 editabledelegates.files =    MyComponents/View/EditableDelegates/EditableCalendarDelegate.qml \
                              MyComponents/View/EditableDelegates/EditableDelegate.qml \
                              MyComponents/View/EditableDelegates/EditableTextFieldDelegate.qml \
+                             MyComponents/View/EditableDelegates/EditableText.qml \
                              MyComponents/View/EditableDelegates/EditableDoubleDelegate.qml \
+                             MyComponents/View/EditableDelegates/EditableComboBox.qml \
                              MyComponents/View/EditableDelegates/EditableComboBoxDelegate.qml
 editabledelegates.path = $$installPath/View/EditableDelegates
 
@@ -160,4 +165,7 @@ DISTFILES += \
     MyComponents/Page/DatabaseDelegate.qml \
     MyComponents/View/PivotView.qml \
     MyComponents/Chart/VSqlBarModelMapper.qml \
-    MyComponents/Chart/BridgeChart.qml
+    MyComponents/Chart/BridgeChart.qml \
+    MyComponents/View/ListViewDelegate.qml \
+    MyComponents/View/EditableDelegates/EditableComboBox.qml \
+    MyComponents/View/EditableDelegates/EditableText.qml

@@ -2,8 +2,8 @@ import QtQuick 2.0
 
 Rectangle {
     id: button
-    width: loader.width*1.2
-    height: loader.height*1.2
+    width: loader.width + 15
+    height: loader.height + 5
     color: mousearea.pressed? theme.highlightSelectColor : ((mousearea.containsMouse || !hovered)? theme.highlightColor : "transparent")
     border.color: (!hovered || mousearea.containsMouse) ? theme.separatorColor : "transparent"
 
