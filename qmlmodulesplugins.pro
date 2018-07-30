@@ -132,7 +132,9 @@ editabledelegates.files =    MyComponents/View/EditableDelegates/EditableCalenda
                              MyComponents/View/EditableDelegates/EditableText.qml \
                              MyComponents/View/EditableDelegates/EditableDoubleDelegate.qml \
                              MyComponents/View/EditableDelegates/EditableComboBox.qml \
-                             MyComponents/View/EditableDelegates/EditableComboBoxDelegate.qml
+                             MyComponents/View/EditableDelegates/EditableComboBoxDelegate.qml \
+                             MyComponents/View/EditableDelegates/ModelEditableComboBox.qml \
+                             MyComponents/View/EditableDelegates/ModelEditableText.qml
 editabledelegates.path = $$installPath/View/EditableDelegates
 
 images.files =    MyComponents/Image/AIRBUS.png \
@@ -168,4 +170,6 @@ DISTFILES += \
     MyComponents/Chart/BridgeChart.qml \
     MyComponents/View/ListViewDelegate.qml \
     MyComponents/View/EditableDelegates/EditableComboBox.qml \
-    MyComponents/View/EditableDelegates/EditableText.qml
+    MyComponents/View/EditableDelegates/EditableText.qml \
+    MyComponents/View/EditableDelegates/ModelEditableComboBox.qml \
+    MyComponents/View/EditableDelegates/ModelEditableText.qml
