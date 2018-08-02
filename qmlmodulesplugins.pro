@@ -129,6 +129,7 @@ coverflowimages.path = $$installPath/View/CoverFlow/Image
 editabledelegates.files =    MyComponents/View/EditableDelegates/EditableCalendarDelegate.qml \
                              MyComponents/View/EditableDelegates/EditableDelegate.qml \
                              MyComponents/View/EditableDelegates/EditableTextFieldDelegate.qml \
+                             MyComponents/View/EditableDelegates/EditableText.qml \
                              MyComponents/View/EditableDelegates/EditableDoubleDelegate.qml \
                              MyComponents/View/EditableDelegates/EditableComboBoxDelegate.qml \
                              MyComponents/View/EditableDelegates/ModelEditableComboBox.qml \

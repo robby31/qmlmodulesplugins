@@ -9,7 +9,7 @@ ComboBox {
     property string modelText: ""
     property color color: "black"
     property bool readOnly: false
-    property alias placeholderText: emptyText.text
+    property alias placeholderText: textField.placeholderText
 
     currentIndex: -1
 
@@ -29,8 +29,7 @@ ComboBox {
 
     indicator: Canvas {
         id: canvas
-        x: control.width - width - control.rightPadding
-        y: control.topPadding + (control.availableHeight - height) / 2
+        anchors { right: parent.right; rightMargin: 5; verticalCenter: parent.verticalCenter }
         width: 12
         height: 8
         contextType: "2d"
@@ -52,20 +51,27 @@ ComboBox {
         }
     }
 
-    contentItem: Text {
-        leftPadding: 10
-        rightPadding: control.indicator.width + control.spacing
+    contentItem: TextField {
+        id: textField
+        anchors { left: control.left; right: canvas.left; rightMargin: 5; verticalCenter: control.verticalCenter }
 
-        text: control.displayText
+        text: control.editable ? control.editText : control.displayText
         font: control.font
         color: control.pressed ? "#17a81a" : control.color
-        verticalAlignment: Text.AlignVCenter
-        elide: Text.ElideRight
+        verticalAlignment: TextInput.AlignVCenter
+
+        enabled: control.editable
+        autoScroll: control.editable
+        readOnly: control.popup.visible
+        selectByMouse: true
+
+        inputMethodHints: control.inputMethodHints
+        validator: control.validator
+
+        background: Item { }
     }
 
     background: Rectangle {
-        implicitWidth: 120
-        implicitHeight: 40
         color: control.focus ? "white" : "transparent"
         border.color: control.focus ? "#21be2b" : "transparent"
     }
@@ -88,13 +94,5 @@ ComboBox {
 
     onActivated: focus = false
 
-    Text {
-        id: emptyText
-        anchors.fill: contentItem
-        verticalAlignment: Text.AlignVCenter
-        text: "<empty>"
-        color: "grey"
-        font { italic: true; pointSize: control.font.pointSize }
-        visible: currentIndex == -1
-    }
+    onAccepted: focus = false
 }
