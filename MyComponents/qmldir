@@ -32,10 +32,8 @@ MyApplication 1.0 MyApplication.qml
 EditableDelegate 1.0 View/EditableDelegates/EditableDelegate.qml
 EditableCalendarDelegate 1.0 View/EditableDelegates/EditableCalendarDelegate.qml
 EditableTextFieldDelegate 1.0 View/EditableDelegates/EditableTextFieldDelegate.qml
-EditableText 1.0 View/EditableDelegates/EditableText.qml
 EditableDoubleDelegate 1.0 View/EditableDelegates/EditableDoubleDelegate.qml
 EditableComboBoxDelegate 1.0 View/EditableDelegates/EditableComboBoxDelegate.qml
-EditableComboBox 1.0 View/EditableDelegates/EditableComboBox.qml
 ModelEditableComboBox 1.0 View/EditableDelegates/ModelEditableComboBox.qml
 ModelEditableText 1.0 View/EditableDelegates/ModelEditableText.qml
 
