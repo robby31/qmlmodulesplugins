@@ -9,6 +9,7 @@ ComboBox {
     property string modelText: ""
     property color color: "black"
     property bool readOnly: false
+    property alias placeholderText: emptyText.text
 
     currentIndex: -1
 
@@ -88,6 +89,7 @@ ComboBox {
     onActivated: focus = false
 
     Text {
+        id: emptyText
         anchors.fill: contentItem
         verticalAlignment: Text.AlignVCenter
         text: "<empty>"
