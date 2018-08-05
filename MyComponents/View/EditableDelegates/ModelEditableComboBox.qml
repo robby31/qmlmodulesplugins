@@ -11,6 +11,8 @@ ComboBox {
     property bool readOnly: false
     property alias placeholderText: textField.placeholderText
 
+    property bool isCompleted: false
+
     signal updateModelText(string text)
 
     currentIndex: -1
@@ -79,7 +81,6 @@ ComboBox {
     }
 
     function updateComboIndex(text) {
-        console.log("update combo text", text, currentIndex, currentText)
         var newIndex = -1
         if (model.toString().startsWith("SqlListModel")) {
             newIndex = model.findRow(text, textRole)
@@ -92,18 +93,29 @@ ComboBox {
             }
         }
 
-        currentIndex = newIndex
+        if (newIndex != currentIndex) {
+//            console.log(index, "update combo text", text, newIndex, currentIndex, currentText)
+            currentIndex = newIndex
+        }
     }
 
-    onModelTextChanged: {
-        //console.log("model text changed", modelText)
+    Component.onCompleted: {
+        isCompleted = true
         editText = modelText
         updateComboIndex(modelText)
     }
 
+    onModelTextChanged: {
+        if (isCompleted) {
+//            console.log(index, "model text changed", modelText)
+            editText = modelText
+            updateComboIndex(modelText)
+        }
+    }
+
     onActivated: {
         // text selected in the combo list
-        //console.log("text selected in combo list", editText, displayText, modelText)
+//        console.log("text selected in combo list", editText, displayText, modelText)
         var newText = editText
         editText = modelText
         updateComboIndex(modelText) // update currentIndex to be aligned to modelText
@@ -115,7 +127,7 @@ ComboBox {
 
     onAccepted: {
         // text written by keyboard
-        //console.log("text entry by keyboard", editText, displayText, modelText)
+//        console.log("text entry by keyboard", editText, displayText, modelText)
         var newText = editText
         editText = modelText
         updateComboIndex(modelText) // update currentIndex to be aligned to modelText
@@ -128,6 +140,17 @@ ComboBox {
     Connections {
         target: model
 
-        onQueryChanged: updateComboIndex(modelText)
+        onDataChanged: {
+            if (currentIndex >= topLeft.row && currentIndex <= bottomRight.row) {
+//                console.log(index, "index to update", currentIndex, topLeft, bottomRight, roles, textRole)
+                updateComboIndex(modelText)
+            }
+        }
+
+        onRowsRemoved: {
+//            console.log(index, "row removed", parent, first, last)
+            if (currentIndex >= first && currentIndex <= last)
+                updateComboIndex(modelText)
+        }
     }
 }
