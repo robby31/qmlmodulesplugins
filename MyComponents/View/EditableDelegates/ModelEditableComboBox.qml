@@ -11,6 +11,8 @@ ComboBox {
     property bool readOnly: false
     property alias placeholderText: textField.placeholderText
 
+    signal updateModelText(string text)
+
     currentIndex: -1
 
     enabled: readOnly ? false : isCurrentItem
@@ -76,23 +78,56 @@ ComboBox {
         border.color: control.focus ? "#21be2b" : "transparent"
     }
 
-    onModelTextChanged: {
-        var index = -1
+    function updateComboIndex(text) {
+        console.log("update combo text", text, currentIndex, currentText)
+        var newIndex = -1
         if (model.toString().startsWith("SqlListModel")) {
-            index = model.findRow(modelText, textRole)
+            newIndex = model.findRow(text, textRole)
         } else {
             for (var i=0;i<model.count;++i) {
-                if (model.get(i)[textRole] === modelText) {
-                    index = i
+                if (model.get(i)[textRole] === text) {
+                    newIndex = i
                     break
                 }
             }
         }
 
-        currentIndex = index
+        currentIndex = newIndex
     }
 
-    onActivated: focus = false
+    onModelTextChanged: {
+        //console.log("model text changed", modelText)
+        editText = modelText
+        updateComboIndex(modelText)
+    }
 
-    onAccepted: focus = false
+    onActivated: {
+        // text selected in the combo list
+        //console.log("text selected in combo list", editText, displayText, modelText)
+        var newText = editText
+        editText = modelText
+        updateComboIndex(modelText) // update currentIndex to be aligned to modelText
+        updateModelText(newText)
+
+        //console.log("end text selected", editText, displayText, currentIndex, currentText)
+        focus = false
+    }
+
+    onAccepted: {
+        // text written by keyboard
+        //console.log("text entry by keyboard", editText, displayText, modelText)
+        var newText = editText
+        editText = modelText
+        updateComboIndex(modelText) // update currentIndex to be aligned to modelText
+        updateModelText(newText)
+
+        //console.log("end text entry", editText, displayText, currentIndex, currentText)
+        focus = false
+    }
+
+    Connections {
+        target: model
+
+        onQueryChanged: updateComboIndex(modelText)
+    }
 }
