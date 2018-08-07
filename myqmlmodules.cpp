@@ -9,8 +9,3 @@ MyQmlModules::MyQmlModules(QQuickItem *parent):
 
     // setFlag(ItemHasContents, true);
 }
-
-MyQmlModules::~MyQmlModules()
-{
-}
-

@@ -9,8 +9,8 @@ class MyQmlModules : public QQuickItem
     Q_DISABLE_COPY(MyQmlModules)
 
 public:
-    MyQmlModules(QQuickItem *parent = 0);
-    ~MyQmlModules();
+    MyQmlModules(QQuickItem *parent = Q_NULLPTR);
+    ~MyQmlModules() Q_DECL_OVERRIDE = default;
 };
 
 #endif // MYQMLMODULES_H

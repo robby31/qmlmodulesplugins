@@ -6,7 +6,6 @@ ProgressCircle::ProgressCircle(QQuickItem *parent) :
     m_size(0),
     m_color(),
     m_logoUrl(),
-    m_timer(),
     m_position(0)
 {
     connect(&m_timer, SIGNAL(timeout()), this, SLOT(refresh()));
