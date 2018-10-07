@@ -66,7 +66,7 @@ Rectangle {
 
         TextField {
             id: filteringTextField
-            anchors { left: parent.left; right: selectAllButton.left }
+            Layout.fillWidth: true
             placeholderText: "Filtering"
             text: columnDataModel ? columnDataModel.textFilter : ""
 
@@ -78,7 +78,6 @@ Rectangle {
 
         Rectangle {
             id: selectAllButton
-            anchors { right: parent.right }
             width: textButton.width*1.2
             height: textButton.height*1.2
             color: selectAllButtonMouseArea.pressed? theme.highlightSelectColor : theme.highlightColor
