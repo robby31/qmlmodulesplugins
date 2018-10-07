@@ -3,7 +3,6 @@ import MyComponents 1.0
 
 EditableText {
     id: editableText
-    anchors.verticalCenter: parent.verticalCenter
     clip: true
 
     property string textRole

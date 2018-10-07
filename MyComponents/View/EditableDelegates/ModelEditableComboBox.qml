@@ -3,7 +3,6 @@ import QtQuick.Controls 2.2
 
 ComboBox {
     id: control
-    anchors.verticalCenter: parent.verticalCenter
 
     property bool isCurrentItem: false
     property string modelText: ""
