@@ -18,3 +18,4 @@ moc_qmlmodulesplugins_plugin.cpp
 qmlmodulesplugins.pro.user
 
 .DS_Store
+*.8-pre1
