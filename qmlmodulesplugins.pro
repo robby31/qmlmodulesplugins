@@ -1,6 +1,6 @@
 TEMPLATE = lib
 TARGET = qmlmodulesplugins
-QT += qml quick sql
+QT += qml quick sql charts
 CONFIG += qt plugin
 
 TARGET = $$qtLibraryTarget($$TARGET)
