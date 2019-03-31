@@ -19,7 +19,7 @@ EditableText {
         }
     }
 
-    text: model[textRole]
+    text: model[textRole] ? model[textRole] : ""
 
     onEditingFinished: {
         if (!readOnly && text != model[textRole])
