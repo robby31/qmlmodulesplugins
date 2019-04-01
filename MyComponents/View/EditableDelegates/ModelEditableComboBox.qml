@@ -140,16 +140,26 @@ ComboBox {
         target: model
 
         onDataChanged: {
+//            console.log(index, "data changed", topLeft, bottomRight, roles, textRole)
             if (currentIndex >= topLeft.row && currentIndex <= bottomRight.row) {
 //                console.log(index, "index to update", currentIndex, topLeft, bottomRight, roles, textRole)
                 updateComboIndex(modelText)
             }
         }
 
+        onRowsInserted: {
+//            console.log(index, "row inserted", parent, first, last)
+        }
+
         onRowsRemoved: {
 //            console.log(index, "row removed", parent, first, last)
             if (currentIndex >= first && currentIndex <= last)
                 updateComboIndex(modelText)
+        }
+
+        onModelReset: {
+//            console.log("model reset", currentIndex)
+            updateComboIndex(modelText)
         }
     }
 }
