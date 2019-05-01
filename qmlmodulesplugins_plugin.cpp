@@ -7,6 +7,7 @@
 #include "SqlModel/sqlquerymodel.h"
 #include "SqlModel/sqltablemodel.h"
 #include "SqlModel/myvxymodelmapper.h"
+#include "Document/markupdocmodel.h"
 
 void QmlmodulespluginsPlugin::registerTypes(const char *uri)
 {
@@ -18,6 +19,7 @@ void QmlmodulespluginsPlugin::registerTypes(const char *uri)
     qmlRegisterType<SqlQueryModel>(uri, 1, 0, "SqlQueryModel");
     qmlRegisterType<SqlTableModel>(uri, 1, 0, "SqlTableModel");
     qmlRegisterType<MyVXYModelMapper>(uri, 1, 0, "MyVXYModelMapper");
+    qmlRegisterType<MarkupDocModel>(uri, 1, 0, "MarkupDocModel");
 }
 
 
