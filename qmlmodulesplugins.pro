@@ -3,14 +3,17 @@ TARGET = qmlmodulesplugins
 QT += qml quick sql charts
 CONFIG += qt plugin
 
+CONFIG += build_all
+CONFIG += debug_and_release
+
 TARGET = $$qtLibraryTarget($$TARGET)
 uri = MyComponents
 
-INCLUDEPATH += $$(MYLIBRARY)/$$QT_VERSION/include/analyzer
-LIBS += -L$$(MYLIBRARY)/$$QT_VERSION -l$$qtLibraryTarget(analyzer)
+INCLUDEPATH += $$(MYLIBRARY)/include/analyzer
+LIBS += -L$$(MYLIBRARY) -l$$qtLibraryTarget(analyzer)
 
-INCLUDEPATH += $$(MYLIBRARY)/$$QT_VERSION/include/QmlApplication
-LIBS += -L$$(MYLIBRARY)/$$QT_VERSION -l$$qtLibraryTarget(QmlApplication)
+INCLUDEPATH += $$(MYLIBRARY)/include/QmlApplication
+LIBS += -L$$(MYLIBRARY) -l$$qtLibraryTarget(QmlApplication)
 
 # Input
 SOURCES += \
