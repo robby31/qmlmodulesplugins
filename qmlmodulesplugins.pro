@@ -10,10 +10,10 @@ TARGET = $$qtLibraryTarget($$TARGET)
 uri = MyComponents
 
 INCLUDEPATH += $$(MYLIBRARY)/include/analyzer
-LIBS += -L$$(MYLIBRARY) -l$$qtLibraryTarget(analyzer)
+LIBS += -L$$(MYLIBRARY)/lib -l$$qtLibraryTarget(analyzer)
 
 INCLUDEPATH += $$(MYLIBRARY)/include/QmlApplication
-LIBS += -L$$(MYLIBRARY) -l$$qtLibraryTarget(QmlApplication)
+LIBS += -L$$(MYLIBRARY)/lib -l$$qtLibraryTarget(QmlApplication)
 
 # Input
 SOURCES += \
