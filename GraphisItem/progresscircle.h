@@ -16,7 +16,7 @@ public:
     Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
     Q_PROPERTY(QString logo READ logoUrl WRITE setLogo NOTIFY logoChanged)
 
-    explicit ProgressCircle(QQuickItem *parent = 0);
+    explicit ProgressCircle(QQuickItem *parent = Q_NULLPTR);
 
     int value()         const {return m_value;}
     qreal size()        const {return m_size;}
@@ -25,11 +25,11 @@ public:
 
     void setValue(int value)    {m_value = value; if (value<0) m_timer.start();   emit valueChanged();}
     void setSize(qreal size)    {m_size = size;     emit sizeChanged();}
-    void setColor(QColor color) {m_color = color;   emit colorChanged();}
-    void setLogo(QString url)   {m_logoUrl = url;   emit logoChanged();}
+    void setColor(const QColor &color) {m_color = color;   emit colorChanged();}
+    void setLogo(const QString &url)   {m_logoUrl = url;   emit logoChanged();}
 
-    void paint(QPainter *painter);
-    QRectF boundingRect() const {return QRectF(QPointF(0,0), QPointF(m_size, m_size));}
+    void paint(QPainter *painter) Q_DECL_OVERRIDE;
+    QRectF boundingRect() const Q_DECL_OVERRIDE { return {QPointF(0,0), QPointF(m_size, m_size)}; }
 
 signals:
     void valueChanged();
@@ -41,13 +41,13 @@ public slots:
     void refresh() {update(boundingRect().toRect());}
 
 private:
-    int m_value;
-    qreal m_size;
+    int m_value = 0;
+    qreal m_size = 0;
     QColor m_color;
     QString m_logoUrl;
 
     QTimer m_timer;
-    int m_position;
+    int m_position = 0;
 };
 
 #endif // PROGRESSCIRCLE_H

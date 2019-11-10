@@ -11,6 +11,8 @@ class MyQmlModules : public QQuickItem
 public:
     MyQmlModules(QQuickItem *parent = Q_NULLPTR);
     ~MyQmlModules() Q_DECL_OVERRIDE = default;
+    MyQmlModules(MyQmlModules&&) = delete;
+    MyQmlModules& operator=(MyQmlModules&&) = delete;
 };
 
 #endif // MYQMLMODULES_H
