@@ -5,7 +5,7 @@ EditableText {
     id: editableText
     clip: true
 
-    property string textRole
+    property string textRole: ""
 
     activeFocusOnPress: false
     selectByMouse: !readOnly
@@ -22,7 +22,7 @@ EditableText {
     text: model[textRole] ? model[textRole] : ""
 
     onEditingFinished: {
-        if (!readOnly && text != model[textRole])
+        if (!readOnly && textRole != "" && model[textRole] && text !== model[textRole])
             model[textRole] = text
         focus = false
         activeFocusOnPress = false
